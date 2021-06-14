@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medicines</title>
+</head>
+<body>
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Medicine name</th>
+        <th>Description</th>
+        <th>manufacturer</th>
+    </tr>
+    {% for medicine in medicines %}
+        <tr>
+        <td style="font-weight: bolder;">{{ medicine.id }}</td>
+        <td>{{ medicine.name }}</td>
+        <td>{{ medicine.description }}</td>
+        <td>{{ medicine.manufacturer }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
